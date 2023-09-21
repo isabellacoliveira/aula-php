@@ -9,10 +9,9 @@ Route::middleware('auth: api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/maquinas/{maquina}', 'MaquinaControllerApi@apiFind');
-Route::get('/maquinas', 'MaquinaControllerApi@apiAll');
-Route::post('/maquinas', 'MaquinaControllerApi@apiStore');
-Route::put('/maquinas/{maquina}', 'MaquinaControllerApi@apiUpdate');
-Route::delete('/maquinas/{maquina}', 'MaquinaControllerApi@apiDelete');
-
+Route::get('/maquinas',[MaquinaControllerApi::class,'index']);
+Route::get('/maquinas/{maquina}',[MaquinaControllerApi::class,'store']);
+Route::post('/maquinas',[MaquinaControllerApi::class,'apiStore']);
+Route::put('/maquinas/{maquina}',[MaquinaControllerApi::class,'apiUpdate']);
+Route::delete('/maquinas/{maquina}',[MaquinaControllerApi::class,'apiDelete']);
 
