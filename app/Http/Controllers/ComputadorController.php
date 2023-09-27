@@ -43,7 +43,7 @@ class ComputadorController extends Controller
     }
     
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the specified resource.    
      */
     public function edit(Computador $computadore)
     {
@@ -67,5 +67,9 @@ class ComputadorController extends Controller
     public function destroy(Computador $computador)
     {
         //
+        $computador->delete();
+        return redirect('/computadores');
     }
+
+
 }
