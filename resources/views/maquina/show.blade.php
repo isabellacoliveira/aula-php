@@ -2,7 +2,6 @@
 @section('conteudo')
 
 <dl>
-
     <dt>Marca</dt>
     <dd>{{$objetoComputador->marca}}</dd>
     <dt>Preço</dt>

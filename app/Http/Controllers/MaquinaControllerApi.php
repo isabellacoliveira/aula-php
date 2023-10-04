@@ -11,10 +11,10 @@ class MaquinaControllerApi extends Controller
         $MaquinaCollection = Maquina::all(); // Corrigido o nome da variável
         return MaquinaResource::collection($MaquinaCollection); // Corrigido o uso da classe de recursos
     }
-    
+
     public function store(Request $request){ // Corrigido o tipo de parâmetro da função
         $dados = $request->all(); // Corrigido o uso da variável $request
         $f = Maquina::create($dados);
-        return response()->json($f, 201); 
-    } 
+        return response()->json($f, 201);
+    }
 }

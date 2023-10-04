@@ -3,7 +3,7 @@
 <a href="/maquinas/create">Novo</a>
 <p>id sigla dataCompra potencialNominal capacidadeProducao valorCompra</p>
     @foreach($MaquinaCollection as $maquina)
-    <p>{{$maquina->codigo}} {{$maquina->descricao}} {{$maquina->unidade}} {{$maquina->estoqueAtual}} {{$maquina->estoqueMinimo}}  <a href="/maquinas/{{$maquina->id}}/edit">Editar</a> 
+    <p>{{$maquina->codigo}} {{$maquina->sigla}} {{$maquina->dataCompra}} {{$maquina->potencialNominal}} {{$maquina->capacidadeProducao}} {{$maquina->valorCompra}} <a href="/maquinas/{{$maquina->id}}/edit">Editar</a>
     <form method="POST" action="{{ route('maquinas.destroy', $maquina->id) }}">
     @csrf
     @method('DELETE')
